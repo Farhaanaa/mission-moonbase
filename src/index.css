@@ -1,0 +1,163 @@
+:root {
+  --color-ivory: #F2EEE5;
+  --color-charcoal: #191A1B;
+  --color-rust: #B64B2C;
+  --color-grey: #A6A39C;
+  --color-grey-light: #E2DDD5;
+  --color-gold: #C5A66A;
+  
+  --font-heading: 'Bodoni Moda', serif;
+  --font-handwriting: 'Caveat', cursive;
+  --font-body: 'Manrope', -apple-system, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+  
+  --border-subtle: 1px solid rgba(25, 26, 27, 0.14);
+  --border-strong: 1px solid var(--color-charcoal);
+  --shadow-editorial: 0 4px 20px rgba(25, 26, 27, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  position: relative;
+  background-image: radial-gradient(rgba(25, 26, 27, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--color-charcoal);
+  letter-spacing: -0.02em;
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Minimalist Editorial Utilities */
+.btn {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--color-rust);
+  color: var(--color-ivory);
+  border-color: var(--color-rust);
+}
+
+.btn-primary:hover {
+  background-color: #9d3f23;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-charcoal);
+  border-color: var(--color-charcoal);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-charcoal);
+  color: var(--color-ivory);
+}
+
+.btn-outline-gold {
+  background-color: transparent;
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--color-gold);
+  color: var(--color-charcoal);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Floating Astronaut Animation */
+@keyframes astronautFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(1.2deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(-1.5deg);
+  }
+  75% {
+    transform: translateY(-8px) rotate(0.8deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.floating-astronaut {
+  animation: astronautFloat 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Editorial rule lines */
+.journal-rule {
+  border: 0;
+  height: 1px;
+  background-color: rgba(25, 26, 27, 0.15);
+  margin: 20px 0;
+}
+
+.journal-rule-double {
+  border-top: 1px solid var(--color-charcoal);
+  border-bottom: 1px solid var(--color-charcoal);
+  height: 4px;
+  margin: 16px 0;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ivory);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-grey);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-charcoal);
+}
